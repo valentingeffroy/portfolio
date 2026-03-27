@@ -1,6 +1,6 @@
 /* Overrides specific to this static export */
 
-/* Seamless marquee (single track with duplicated items) */
+/* Seamless marquee (single horizontal track, duplicated content) */
 ._w-images_logos {
   overflow: hidden;
 }
@@ -8,8 +8,26 @@
 ._w-images_logos ._w-images-moving.is-marquee {
   display: flex;
   width: max-content;
+  white-space: nowrap;
   will-change: transform;
   animation: logosMarquee 35s linear infinite;
+}
+
+/* Keep both duplicated lists on one row (no vertical stacking) */
+._w-images_logos ._w-images-moving.is-marquee > .w-dyn-list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+._w-images_logos .wrapper-images-symbol_logos {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+}
+
+._w-images_logos .wrapper-images-symbol_logos .w-dyn-item {
+  flex: 0 0 auto;
 }
 
 @keyframes logosMarquee {

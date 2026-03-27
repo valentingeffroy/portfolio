@@ -206,57 +206,6 @@
       <div class="wrapper-navbar">
         <div class="global-styles w-embed">
           <style>
-            /* Local marquee override (CSS-only, works without Webflow IX) */
-            ._w-images_logos {
-              overflow: hidden;
-              position: relative;
-            }
-
-            ._w-images_logos ._w-images-moving {
-              display: flex;
-              width: max-content;
-              left: 0;
-              top: 0;
-              will-change: transform;
-              transform-style: flat;
-            }
-
-            ._w-images_logos ._w-images-moving._1 {
-              animation: logosMarqueeTrack1 35s linear infinite;
-            }
-
-            ._w-images_logos ._w-images-moving._2 {
-              animation: logosMarqueeTrack2 35s linear infinite;
-            }
-
-            @keyframes logosMarqueeTrack1 {
-              0% {
-                transform: translate3d(0, 0, 0)
-              }
-              100% {
-                transform: translate3d(-100%, 0, 0)
-              }
-            }
-
-            @keyframes logosMarqueeTrack2 {
-              0% {
-                transform: translate3d(100%, 0, 0)
-              }
-              100% {
-                transform: translate3d(0, 0, 0)
-              }
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-              ._w-images_logos ._w-images-moving._1,
-              ._w-images_logos ._w-images-moving._2 {
-                animation: none;
-                position: static;
-                transform: none;
-              }
-            }
-
-
             .image-bg_project {
               height: auto;
               aspect-ratio: 4/2.5;
