@@ -1,0 +1,29 @@
+/* Overrides specific to this static export */
+
+/* Seamless marquee (single track with duplicated items) */
+._w-images_logos {
+  overflow: hidden;
+}
+
+._w-images_logos ._w-images-moving.is-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: logosMarquee 35s linear infinite;
+}
+
+@keyframes logosMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ._w-images_logos ._w-images-moving.is-marquee {
+    animation: none;
+    transform: none;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Ce repo contient une version **100% statique** de ton site (export Webflow) prête à être déployée sur **Netlify**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentingeffroy/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/valentingeffroy/portfolio/issues"
+  },
+  "homepage": "https://github.com/valentingeffroy/portfolio#readme",
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}
