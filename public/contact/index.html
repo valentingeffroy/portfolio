@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Valentin Geffroy</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="/css/webflow.shared.min.css" />
+    <link rel="stylesheet" href="/css/webflow.page.min.css" />
+  </head>
+  <body>
+    <main class="page-wrapper">
+      <section class="section">
+        <div class="padding-global">
+          <div class="container-large">
+            <h1 class="heading-style-h1">Contact</h1>
+            <p class="text-size-regular">
+              Tu peux aussi m’écrire directement à
+              <a href="mailto:contact@valentingeffroy.fr">contact@valentingeffroy.fr</a>.
+            </p>
+
+            <div class="w-form">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hide">
+                  <label>Ne pas remplir: <input name="bot-field" /></label>
+                </p>
+
+                <label for="name">Nom</label>
+                <input class="w-input" id="name" name="name" type="text" required />
+
+                <label for="email">Email</label>
+                <input class="w-input" id="email" name="email" type="email" required />
+
+                <label for="message">Message</label>
+                <textarea class="w-input" id="message" name="message" rows="6" required></textarea>
+
+                <button class="w-button" type="submit">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
