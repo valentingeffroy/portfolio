@@ -142,8 +142,32 @@ function initNavHeaderBackground() {
   onScroll();
 }
 
+function syncAnchorScrollOffset() {
+  const nav = document.getElementById("navbar");
+  if (!nav) return;
+  const h = Math.round(nav.getBoundingClientRect().height);
+  document.documentElement.style.setProperty(
+    "--anchor-scroll-offset",
+    `${h}px`,
+  );
+}
+
+function initAnchorScrollOffset() {
+  syncAnchorScrollOffset();
+  window.addEventListener("resize", syncAnchorScrollOffset, { passive: true });
+  const nav = document.getElementById("navbar");
+  if (nav && typeof ResizeObserver !== "undefined") {
+    const ro = new ResizeObserver(() => syncAnchorScrollOffset());
+    ro.observe(nav);
+  }
+  window.addEventListener("load", () => {
+    requestAnimationFrame(syncAnchorScrollOffset);
+  });
+}
+
 function boot() {
   initBrandHomeBehavior();
+  initAnchorScrollOffset();
   applyTestimonialBlurWrapping();
   window.addEventListener("resize", applyTestimonialBlurWrapping);
   initNavHeaderBackground();

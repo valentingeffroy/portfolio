@@ -1,5 +1,13 @@
 /* Overrides specific to this static export (moved from inline Webflow embeds) */
 
+/* Ancres internes : dégagement sous la navbar sticky (hauteur via site.js) */
+#about,
+#projects,
+#services,
+#testimonials {
+  scroll-margin-top: var(--anchor-scroll-offset, 5rem);
+}
+
 /* --- Project card: background pan on hover (desktop) --- */
 @media screen and (min-width: 992px) {
   ._w-project .image-bg_project {
