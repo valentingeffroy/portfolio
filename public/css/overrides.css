@@ -15,18 +15,6 @@
   }
 }
 
-/* --- Testimonial blur (desktop) --- */
-@media screen and (min-width: 992px) {
-  .text_blur {
-    filter: blur(2px);
-  }
-
-  .wrapper-testimonial:hover .text_blur,
-  .text_blurred:hover .text_blur {
-    filter: none;
-  }
-}
-
 /* --- Former global-styles embed --- */
 .image-bg_project {
   height: auto;
@@ -131,14 +119,6 @@ a,
 
 .hide {
   display: none !important;
-}
-
-.text_blurred.is-testimonial strong {
-  border-bottom: 2px solid var(--color--blue-01-✨);
-  color: var(--color--black-primary);
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  font-weight: 700;
 }
 
 /* --- Marquee logos --- */
