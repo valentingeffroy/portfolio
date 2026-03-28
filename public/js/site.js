@@ -64,6 +64,25 @@ document.addEventListener("click", async (e) => {
   }
 });
 
+/** Wrap loose text nodes in .text_blurred with .text_blur (desktop only; matches Webflow IX intent). */
+function applyTestimonialBlurWrapping() {
+  if (window.innerWidth <= 991) return;
+
+  document.querySelectorAll(".text_blurred").forEach((testimonial) => {
+    testimonial.childNodes.forEach((element) => {
+      if (element.nodeType === Node.TEXT_NODE) {
+        const text = element.textContent.trim();
+        if (text !== "") {
+          const span = document.createElement("span");
+          span.classList.add("text_blur");
+          span.textContent = text;
+          element.replaceWith(span);
+        }
+      }
+    });
+  });
+}
+
 function isHomePage() {
   const p = window.location.pathname;
   return p === "/" || p.toLowerCase() === "/index.html";
@@ -125,6 +144,8 @@ function initNavHeaderBackground() {
 
 function boot() {
   initBrandHomeBehavior();
+  applyTestimonialBlurWrapping();
+  window.addEventListener("resize", applyTestimonialBlurWrapping);
   initNavHeaderBackground();
 }
 
