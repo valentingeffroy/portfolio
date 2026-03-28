@@ -125,217 +125,10 @@
   </head>
   <body>
     <div>
-      <div class="css-page w-embed">
-        <style>
-          /* project hover effect */
-          @media screen and (min-width: 992px) {
-            ._w-project .image-bg_project {
-              background-position: 50% 0;
-              background-size: cover;
-              background-repeat: no-repeat;
-              transition: background-position 5000ms linear;
-            }
-
-            ._w-project:hover .image-bg_project {
-              background-position: 50% 100%;
-              transition: background-position 15000ms linear;
-              /* border: 2px solid #f66565; */
-            }
-          }
-        </style>
-      </div>
-      <div class="js-page w-embed w-script">
-        <style>
-          @media screen and (min-width: 992px) {
-            .text_blur {
-              filter: blur(2px);
-            }
-
-            .wrapper-testimonial:hover .text_blur {
-              filter: none;
-            }
-
-            .text_blurred:hover .text_blur {
-              filter: none;
-            }
-          }
-        </style>
-
-        <script>
-          // Attend que le DOM soit chargé
-          document.addEventListener("DOMContentLoaded", function () {
-            // Fonction qui applique l'effet de blur
-            function applyBlurEffect() {
-              // Vérifie si la largeur de l'écran est supérieure à 991px
-              if (window.innerWidth > 991) {
-                // Sélectionnez tous les éléments avec la classe text_blurred
-                const testimonials = document.querySelectorAll(".text_blurred");
-
-                testimonials.forEach((testimonial) => {
-                  // Sélectionnez tous les éléments de texte à l'intérieur du témoignage
-                  const textElements = testimonial.childNodes;
-
-                  // Parcourir tous les éléments de texte et les envelopper dans un span avec la classe text_blur si nécessaire
-                  textElements.forEach((element) => {
-                    if (element.nodeType === Node.TEXT_NODE) {
-                      // Si l'élément est un nœud texte
-                      const text = element.textContent.trim(); // Obtenez le texte et supprimez les espaces vides au début et à la fin
-
-                      // Vérifiez si le texte n'est pas vide
-                      if (text !== "") {
-                        // Créez un nouveau span avec la classe text_blur et remplacez le nœud texte d'origine
-                        const span = document.createElement("span");
-                        span.classList.add("text_blur");
-                        span.textContent = text;
-                        element.replaceWith(span);
-                      }
-                    }
-                  });
-                });
-              }
-            }
-
-            // Exécute la fonction au chargement initial
-            applyBlurEffect();
-
-            // Ajoute un écouteur d'événement pour le redimensionnement de la fenêtre
-            window.addEventListener("resize", applyBlurEffect);
-          });
-        </script>
-      </div>
+      <div class="css-page w-embed"></div>
+      <div class="js-page w-embed w-script"></div>
       <div class="wrapper-navbar">
-        <div class="global-styles w-embed">
-          <style>
-            .image-bg_project {
-              height: auto;
-              aspect-ratio: 4/2.5;
-            }
-
-            body {
-              background-position: 50%;
-              background-image: url(/assets/images/639075a5cc27e9782801702e_noise.png);
-            }
-
-            /* Make text look crisper and more legible in all browsers */
-            body {
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              font-smoothing: antialiased;
-              text-rendering: optimizeLegibility;
-            }
-
-            /* Focus state style for keyboard navigation for the focusable elements */
-            *[tabindex]:focus-visible,
-            input[type="file"]:focus-visible {
-              outline: 0.125rem solid #4d65ff;
-              outline-offset: 0.125rem;
-            }
-
-            /* Get rid of top margin on first element in any rich text element */
-            .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
-              margin-top: 0 !important;
-            }
-
-            /* Get rid of bottom margin on last element in any rich text element */
-            .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
-              margin-bottom: 0 !important;
-            }
-
-            /* Prevent all click and hover interaction with an element */
-            .pointer-events-off {
-              pointer-events: none;
-            }
-
-            /* Enables all click and hover interaction with an element */
-            .pointer-events-on {
-              pointer-events: auto;
-            }
-
-            /* Create a class of .div-square which maintains a 1:1 dimension of a div */
-            .div-square::after {
-              content: "";
-              display: block;
-              padding-bottom: 100%;
-            }
-
-            /* Make sure containers never lose their center alignment */
-            .container-medium,.container-small, .container-large {
-              margin-right: auto !important;
-              margin-left: auto !important;
-            }
-
-            /*
-            Make the following elements inherit typography styles from the parent and not have hardcoded values.
-            Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-            Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-            */
-
-            a,
-            .w-input,
-            .w-select,
-            .w-tab-link,
-            .w-nav-link,
-            .w-dropdown-btn,
-            .w-dropdown-toggle,
-            .w-dropdown-link {
-              color: inherit;
-              text-decoration: inherit;
-              font-size: inherit;
-            }
-
-
-            /* Apply "..." after 3 lines of text */
-            .text-style-3lines {
-              display: -webkit-box;
-              overflow: hidden;
-              -webkit-line-clamp: 3;
-              -webkit-box-orient: vertical;
-            }
-
-            /* Apply "..." after 2 lines of text */
-            .text-style-2lines {
-              display: -webkit-box;
-              overflow: hidden;
-              -webkit-line-clamp: 2;
-              -webkit-box-orient: vertical;
-            }
-
-            .link::before {
-              content: '';
-              transform-origin: 100% 50%;
-              transform: scale3d(0, 1, 1);
-              transition: transform 0.3s;
-            }
-
-            .link:hover::before {
-              transform-origin: 0% 50%;
-              transform: scale3d(1, 1, 1);
-            }
-
-            .link::before,
-            .link::after {
-              position: absolute;
-              width: 100%;
-              height: 1px;
-              background: currentColor;
-              top: 100%;
-              left: 0;
-              pointer-events: none;
-            }
-
-            .hide {
-              display: none !important;
-            }
-
-            .text_blurred.is-testimonial strong {
-              border-bottom: 2px solid var(--color--blue-primary);
-              color: var(--color--black-primary);
-              margin-left: 0.25rem;
-              margin-right: 0.25rem;
-              font-weight: 700;
-            }
-          </style>
-        </div>
+        <div class="global-styles w-embed"></div>
         <div class="cookie-fs">
           <div
             fs-cc="banner"
@@ -620,10 +413,13 @@
                         </div>
                         <div class="padding-global">
                           <div class="_w-links_nav is-mobile">
-                            <a href="#" class="link w-nav-link">About</a
-                            ><a href="#" class="link w-nav-link">Projects</a
-                            ><a href="#" class="link w-nav-link">Services</a
-                            ><a href="#" class="link w-nav-link">Testimonials</a
+                            <a href="#about" class="link w-nav-link">About</a
+                            ><a href="#projects" class="link w-nav-link"
+                              >Projects</a
+                            ><a href="#services" class="link w-nav-link"
+                              >Services</a
+                            ><a href="#testimonials" class="link w-nav-link"
+                              >Testimonials</a
                             ><a href="/figma-to-webflow" class="link w-nav-link"
                               >Figma to Webflow quote ✨</a
                             >
@@ -690,37 +486,7 @@
           </div>
           <div class="w-nav-overlay" id="w-nav-overlay-0"></div>
         </div>
-        <div class="js-code w-embed w-script">
-          <script>
-            // Attend que le DOM soit chargé
-            document.addEventListener("DOMContentLoaded", function () {
-              // Sélectionnez tous les éléments avec la classe text_testimonial
-              const testimonials = document.querySelectorAll(".text_blurred");
-
-              testimonials.forEach((testimonial) => {
-                // Sélectionnez tous les éléments de texte à l'intérieur du témoignage
-                const textElements = testimonial.childNodes;
-
-                // Parcourir tous les éléments de texte et les envelopper dans un span avec la classe text_blur si nécessaire
-                textElements.forEach((element) => {
-                  if (element.nodeType === Node.TEXT_NODE) {
-                    // Si l'élément est un nœud texte
-                    const text = element.textContent.trim(); // Obtenez le texte et supprimez les espaces vides au début et à la fin
-
-                    // Vérifiez si le texte n'est pas vide
-                    if (text !== "") {
-                      // Créez un nouveau span avec la classe text_blur et remplacez le nœud texte d'origine
-                      const span = document.createElement("span");
-                      span.classList.add("text_blur");
-                      span.textContent = text;
-                      element.replaceWith(span);
-                    }
-                  }
-                });
-              });
-            });
-          </script>
-        </div>
+        <div class="js-code w-embed w-script"></div>
       </div>
       <div id="top"></div>
       <main class="page-wrapper">
@@ -3494,19 +3260,6 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <script>
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector(".wrapper-nav-content"); //Change class to match yours
-        var scrollPosition = window.scrollY || window.pageYOffset;
-
-        if (scrollPosition > 50) {
-          //Change offset in px
-          header.style.backgroundColor = "#fefefe"; //Change target colour
-        } else {
-          header.style.backgroundColor = "transparent"; //Change starting colour
-        }
-      });
-    </script>
     <script src="/js/site.js" defer></script>
   </body>
 </html>
