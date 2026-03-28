@@ -1,14 +1,29 @@
+function getCopyButtonLabel(button) {
+  return button?.querySelector(':scope > div:not(.icon-embed-small)') ?? null;
+}
+
 function setButtonCopiedState(button, isCopied) {
   if (!button) return;
+
+  const label = getCopyButtonLabel(button);
+  const email = button.getAttribute('data-copy') || '';
+  const message =
+    button.getAttribute('data-copy-message')?.trim() || 'Copied!';
 
   if (isCopied) {
     button.classList.add('is-copied');
     button.setAttribute('aria-live', 'polite');
-    button.setAttribute('aria-label', 'Copied to clipboard');
+    button.setAttribute('aria-label', message);
+    if (label) {
+      label.textContent = message;
+    }
   } else {
     button.classList.remove('is-copied');
     button.removeAttribute('aria-live');
     button.removeAttribute('aria-label');
+    if (label && email) {
+      label.textContent = email;
+    }
   }
 }
 
@@ -18,7 +33,6 @@ async function copyText(text) {
     return;
   }
 
-  // Fallback for older browsers / non-secure contexts
   const ta = document.createElement('textarea');
   ta.value = text;
   ta.setAttribute('readonly', '');
@@ -32,7 +46,8 @@ async function copyText(text) {
 }
 
 document.addEventListener('click', async (e) => {
-  const button = e.target instanceof Element ? e.target.closest('[data-copy]') : null;
+  const button =
+    e.target instanceof Element ? e.target.closest('[data-copy]') : null;
   if (!button) return;
 
   e.preventDefault();
@@ -45,6 +60,6 @@ document.addEventListener('click', async (e) => {
     setButtonCopiedState(button, true);
     window.setTimeout(() => setButtonCopiedState(button, false), 1500);
   } catch {
-    // no-op (clipboard blocked)
+    // clipboard blocked
   }
 });
