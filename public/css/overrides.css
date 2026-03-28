@@ -1,14 +1,8 @@
 /* Overrides specific to this static export (moved from inline Webflow embeds) */
 
-/* Navbar : hauteur de référence par breakpoint (alignée sur .wrapper-nav-content) */
+/* Navbar : hauteur de référence = .wrapper-nav-content (pas d’IDs en sélecteur) */
 :root {
-  --navbar-height: 5.25rem;
-}
-
-@media screen and (max-width: 991px) {
-  :root {
-    --navbar-height: 5rem;
-  }
+  --navbar-height: 5rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -23,17 +17,23 @@
   }
 }
 
-#navbar {
+.wrapper-nav-content {
   box-sizing: border-box;
   min-height: var(--navbar-height);
 }
 
-/* Ancres internes : même valeur que la hauteur navbar */
-#about,
-#projects,
-#services,
-#testimonials {
+/* Ancres : offset = même variable que la barre (cibles par classes) */
+section.section_about,
+section.section_projects.hide,
+.section_services .anchor,
+section.section_testimonials {
   scroll-margin-top: var(--navbar-height);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* --- Project card: background pan on hover (desktop) --- */
