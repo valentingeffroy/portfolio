@@ -24,7 +24,7 @@
 
 /* Ancres : offset = même variable que la barre (cibles par classes) */
 section.section_about,
-section.section_projects.hide,
+section.section_projects,
 .section_services .anchor,
 section.section_testimonials {
   scroll-margin-top: var(--navbar-height);
