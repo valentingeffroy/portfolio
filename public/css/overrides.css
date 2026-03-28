@@ -1,11 +1,39 @@
 /* Overrides specific to this static export (moved from inline Webflow embeds) */
 
-/* Ancres internes : dégagement sous la navbar sticky (hauteur via site.js) */
+/* Navbar : hauteur de référence par breakpoint (alignée sur .wrapper-nav-content) */
+:root {
+  --navbar-height: 5.25rem;
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --navbar-height: 5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --navbar-height: 4.25rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  :root {
+    --navbar-height: 4rem;
+  }
+}
+
+#navbar {
+  box-sizing: border-box;
+  min-height: var(--navbar-height);
+}
+
+/* Ancres internes : même valeur que la hauteur navbar */
 #about,
 #projects,
 #services,
 #testimonials {
-  scroll-margin-top: var(--anchor-scroll-offset, 5rem);
+  scroll-margin-top: var(--navbar-height);
 }
 
 /* --- Project card: background pan on hover (desktop) --- */
