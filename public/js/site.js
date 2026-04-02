@@ -142,6 +142,7 @@ function initNavHeaderBackground() {
   onScroll();
 }
 
+
 function boot() {
   initBrandHomeBehavior();
   applyTestimonialBlurWrapping();

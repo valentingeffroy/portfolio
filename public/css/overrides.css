@@ -3,6 +3,10 @@
 /* Navbar : hauteur de référence = .wrapper-nav-content (pas d’IDs en sélecteur) */
 :root {
   --navbar-height: 5rem;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --font-display: var(--font-sans);
 }
 
 @media screen and (max-width: 767px) {
@@ -72,9 +76,44 @@ section.section_testimonials {
 body {
   background-position: 50%;
   background-image: url(/assets/images/639075a5cc27e9782801702e_noise.png);
+  font-family: var(--font-sans) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Remove dependency on externally hosted fonts (Google Fonts). */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1_home,
+.heading_about,
+.heading-style-h1,
+.heading-style-h2,
+.heading-style-h3 {
+  font-family: var(--font-display) !important;
+}
+
+/* --- Skip link (a11y) --- */
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: #000;
+  border: 2px solid currentColor;
+  border-radius: 0.75rem;
+  transform: translateY(-200%);
+  transition: transform 0.2s;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 *[tabindex]:focus-visible,
