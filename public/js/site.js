@@ -142,12 +142,99 @@ function initNavHeaderBackground() {
   onScroll();
 }
 
+/**
+ * Fallback mobile nav toggle (no Webflow runtime dependency).
+ * Keeps Webflow's HTML/CSS structure but toggles state with vanilla JS.
+ */
+function initNavBurgerFallback() {
+  const nav = document.querySelector(".w-nav");
+  if (!nav) return;
+
+  const button = nav.querySelector(".w-nav-button");
+  const menu = nav.querySelector(".w-nav-menu");
+  const overlay = nav.querySelector(".w-nav-overlay");
+  if (!button || !menu) return;
+
+  const originalParent = menu.parentElement;
+  const originalNextSibling = menu.nextSibling;
+
+  function restoreMenuPlacement() {
+    if (!originalParent) return;
+    if (menu.parentElement === originalParent) return;
+    if (originalNextSibling) originalParent.insertBefore(menu, originalNextSibling);
+    else originalParent.appendChild(menu);
+  }
+
+  function placeMenuInOverlay() {
+    if (!overlay) return;
+    if (menu.parentElement === overlay) return;
+    overlay.appendChild(menu);
+  }
+
+  function setOpen(isOpen) {
+    button.classList.toggle("w--open", isOpen);
+    button.setAttribute("aria-expanded", String(isOpen));
+
+    if (isOpen) {
+      placeMenuInOverlay();
+      menu.setAttribute("data-nav-menu-open", "");
+      if (overlay) overlay.style.display = "block";
+    } else {
+      menu.removeAttribute("data-nav-menu-open");
+      restoreMenuPlacement();
+      if (overlay) overlay.style.display = "none";
+    }
+  }
+
+  function toggle() {
+    setOpen(!button.classList.contains("w--open"));
+  }
+
+  // Capture to reliably catch clicks on inner icon.
+  document.addEventListener(
+    "click",
+    (e) => {
+      const target = e.target instanceof Element ? e.target : null;
+      if (!target) return;
+      const clicked = target.closest(".w-nav-button");
+      if (!clicked) return;
+      if (!nav.contains(clicked)) return;
+      e.preventDefault();
+      toggle();
+    },
+    true,
+  );
+
+  // Close on link click
+  menu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => setOpen(false));
+  });
+
+  // Close on escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (!button.classList.contains("w--open")) return;
+    setOpen(false);
+  });
+
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!button.classList.contains("w--open")) return;
+    const target = e.target instanceof Element ? e.target : null;
+    if (!target) return;
+    if (nav.contains(target)) return;
+    setOpen(false);
+  });
+
+  setOpen(false);
+}
 
 function boot() {
   initBrandHomeBehavior();
   applyTestimonialBlurWrapping();
   window.addEventListener("resize", applyTestimonialBlurWrapping);
   initNavHeaderBackground();
+  initNavBurgerFallback();
 }
 
 if (document.readyState === "loading") {
