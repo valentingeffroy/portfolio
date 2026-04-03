@@ -3,10 +3,9 @@
 /* Navbar : hauteur de référence = .wrapper-nav-content (pas d’IDs en sélecteur) */
 :root {
   --navbar-height: 5rem;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --font-display: var(--font-sans);
+  --font-sans: "Karla", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: "Bebas Neue", Impact, sans-serif;
 }
 
 @media screen and (max-width: 767px) {
@@ -82,7 +81,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Remove dependency on externally hosted fonts (Google Fonts). */
+/* Headings: Bebas Neue. Body: Karla. See /css/fonts.css + /fonts/*.woff2 */
 h1,
 h2,
 h3,
@@ -93,7 +92,10 @@ h6,
 .heading_about,
 .heading-style-h1,
 .heading-style-h2,
-.heading-style-h3 {
+.heading-style-h3,
+.heading-style-h4,
+.heading-style-h5,
+.heading-style-h6 {
   font-family: var(--font-display) !important;
 }
 
