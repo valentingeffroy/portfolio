@@ -88,7 +88,7 @@ function isHomePage() {
   return p === "/" || p.toLowerCase() === "/index.html";
 }
 
-/** Logo: sur la home, clic sans effet ; ailleurs, `href="/"` mène à l’accueil. */
+/** Logo: sur la home, clic sans effet ; ailleurs, `href="/"` mène à l'accueil. */
 function initBrandHomeBehavior() {
   document.addEventListener(
     "click",
@@ -142,89 +142,96 @@ function initNavHeaderBackground() {
   onScroll();
 }
 
+const NAV_COLLAPSE_MQ = window.matchMedia("(max-width: 991px)");
+
 /**
- * Fallback mobile nav toggle (no Webflow runtime dependency).
- * Keeps Webflow's HTML/CSS structure but toggles state with vanilla JS.
+ * Undo legacy nav scripts that moved <nav> into .w-nav-overlay and set
+ * data-nav-menu-open / inline display on the overlay.
  */
-function initNavBurgerFallback() {
-  const nav = document.querySelector(".w-nav");
-  if (!nav) return;
+function repairMobileNavDom(root, menu, overlay) {
+  const leftNav = root.querySelector("._w-left_nav");
+  const brand = leftNav?.querySelector("a._w-brand");
+  if (leftNav && brand && menu && overlay?.contains(menu)) {
+    brand.insertAdjacentElement("afterend", menu);
+  }
+  menu.removeAttribute("data-nav-menu-open");
+  if (overlay) {
+    overlay.style.removeProperty("display");
+  }
+}
 
-  const button = nav.querySelector(".w-nav-button");
-  const menu = nav.querySelector(".w-nav-menu");
-  const overlay = nav.querySelector(".w-nav-overlay");
-  if (!button || !menu) return;
+function initMobileNav() {
+  const root = document.getElementById("navbar");
+  const button = root?.querySelector(".w-nav-button");
+  const menu = document.getElementById("site-nav-menu");
+  const overlay = root?.querySelector(".w-nav-overlay");
+  if (!root || !button || !menu) return;
 
-  const originalParent = menu.parentElement;
-  const originalNextSibling = menu.nextSibling;
+  repairMobileNavDom(root, menu, overlay);
 
-  function restoreMenuPlacement() {
-    if (!originalParent) return;
-    if (menu.parentElement === originalParent) return;
-    if (originalNextSibling) originalParent.insertBefore(menu, originalNextSibling);
-    else originalParent.appendChild(menu);
+  function isCollapsedLayout() {
+    return NAV_COLLAPSE_MQ.matches || window.innerWidth <= 991;
   }
 
-  function placeMenuInOverlay() {
-    if (!overlay) return;
-    if (menu.parentElement === overlay) return;
-    overlay.appendChild(menu);
-  }
-
-  function setOpen(isOpen) {
-    button.classList.toggle("w--open", isOpen);
-    button.setAttribute("aria-expanded", String(isOpen));
-
-    if (isOpen) {
-      placeMenuInOverlay();
-      menu.setAttribute("data-nav-menu-open", "");
-      if (overlay) overlay.style.display = "block";
-    } else {
-      menu.removeAttribute("data-nav-menu-open");
-      restoreMenuPlacement();
-      if (overlay) overlay.style.display = "none";
+  function setOpen(wantOpen) {
+    const open = Boolean(wantOpen) && isCollapsedLayout();
+    root.classList.toggle("is-mobile-nav-open", open);
+    button.classList.toggle("w--open", open);
+    button.setAttribute("aria-expanded", String(open));
+    button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.classList.toggle("is-nav-open", open);
+    if (overlay) {
+      overlay.setAttribute("aria-hidden", open ? "false" : "true");
+      if (!open) overlay.style.removeProperty("display");
     }
   }
 
   function toggle() {
-    setOpen(!button.classList.contains("w--open"));
+    setOpen(!root.classList.contains("is-mobile-nav-open"));
   }
 
-  // Capture to reliably catch clicks on inner icon.
   document.addEventListener(
     "click",
     (e) => {
       const target = e.target instanceof Element ? e.target : null;
       if (!target) return;
-      const clicked = target.closest(".w-nav-button");
-      if (!clicked) return;
-      if (!nav.contains(clicked)) return;
+      const hit = target.closest(".w-nav-button");
+      if (!hit || !root.contains(hit)) return;
+      if (!isCollapsedLayout()) return;
       e.preventDefault();
+      e.stopPropagation();
       toggle();
     },
     true,
   );
 
-  // Close on link click
+  button.addEventListener("keydown", (e) => {
+    if (!isCollapsedLayout()) return;
+    if (e.key !== "Enter" && e.key !== " ") return;
+    e.preventDefault();
+    toggle();
+  });
+
+  overlay?.addEventListener("click", () => setOpen(false));
+
   menu.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => setOpen(false));
   });
 
-  // Close on escape
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
-    if (!button.classList.contains("w--open")) return;
+    if (!root.classList.contains("is-mobile-nav-open")) return;
     setOpen(false);
   });
 
-  // Close on outside click
-  document.addEventListener("click", (e) => {
-    if (!button.classList.contains("w--open")) return;
-    const target = e.target instanceof Element ? e.target : null;
-    if (!target) return;
-    if (nav.contains(target)) return;
-    setOpen(false);
-  });
+  const onMqChange = () => {
+    if (!isCollapsedLayout()) setOpen(false);
+  };
+  if (typeof NAV_COLLAPSE_MQ.addEventListener === "function") {
+    NAV_COLLAPSE_MQ.addEventListener("change", onMqChange);
+  } else {
+    NAV_COLLAPSE_MQ.addListener(onMqChange);
+  }
 
   setOpen(false);
 }
@@ -234,7 +241,7 @@ function boot() {
   applyTestimonialBlurWrapping();
   window.addEventListener("resize", applyTestimonialBlurWrapping);
   initNavHeaderBackground();
-  initNavBurgerFallback();
+  initMobileNav();
 }
 
 if (document.readyState === "loading") {

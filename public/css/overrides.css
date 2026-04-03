@@ -260,3 +260,57 @@ a,
     transform: none;
   }
 }
+
+/* --- Mobile / tablet nav (≤991px, matches data-collapse="medium") --- */
+@media screen and (max-width: 991px) {
+  #navbar.is-mobile-nav-open {
+    z-index: 2000;
+  }
+
+  #navbar.is-mobile-nav-open .border-bottom {
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* Backdrop only: #site-nav-menu is a fixed sibling, not inside the overlay */
+  #navbar.is-mobile-nav-open .w-nav-overlay {
+    display: block !important;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    overflow: visible;
+    pointer-events: auto;
+    cursor: pointer;
+    background-color: rgb(26 26 26 / 18%);
+  }
+
+  #navbar.is-mobile-nav-open #site-nav-menu.w-nav-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - var(--navbar-height));
+    max-height: calc(100dvh - var(--navbar-height));
+    overflow-y: auto;
+    float: none;
+    z-index: 1000;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #navbar.is-mobile-nav-open #site-nav-menu.w-nav-menu,
+  #navbar.is-mobile-nav-open #site-nav-menu .padding-global {
+    box-sizing: border-box;
+  }
+}
+
+body.is-nav-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
