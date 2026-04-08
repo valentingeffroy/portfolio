@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "zoo-de-guadeloupe-tourism",
+      "url": "https://www.zoodeguadeloupe.com/",
+      "titleLine": "Zoo de Guadeloupe - Tourism",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2025,
+      "month": 10,
+      "designer": {
+        "name": "Digidop",
+        "url": "https://www.digidop.com/"
+      },
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/zoo-de-guadeloupe-tourism-mobile.avif",
+          "srcset": "/assets/images/zoo-de-guadeloupe-tourism-mobile-p-500.avif 500w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-800.avif 800w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-1080.avif 1080w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-1600.avif 1600w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/zoo-de-guadeloupe-tourism-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "point-nine-vc",
+      "url": "https://www.pointnine.com/",
+      "titleLine": "Point Nine - VC",
+      "featured": true,
+      "companyType": "vc",
+      "statusLabel": "released",
+      "year": 2026,
+      "month": 2,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/point-nine-vc-mobile.avif",
+          "srcset": "/assets/images/point-nine-vc-mobile-p-500.avif 500w,\n/assets/images/point-nine-vc-mobile-p-800.avif 800w,\n/assets/images/point-nine-vc-mobile-p-1080.avif 1080w,\n/assets/images/point-nine-vc-mobile-p-1600.avif 1600w,\n/assets/images/point-nine-vc-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/point-nine-vc-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "motion-control-suspension-automotive",
+      "url": "https://www.motioncontrolsuspension.com/",
+      "titleLine": "Motion Control Suspension - Automotive",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2025,
+      "month": 12,
+      "designer": {
+        "name": "Outlier Creative",
+        "url": "https://www.outliercreative.com/"
+      },
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/motion-control-suspension-automotive-mobile.avif",
+          "srcset": "/assets/images/motion-control-suspension-automotive-mobile-p-500.avif 500w,\n/assets/images/motion-control-suspension-automotive-mobile-p-800.avif 800w,\n/assets/images/motion-control-suspension-automotive-mobile-p-1080.avif 1080w,\n/assets/images/motion-control-suspension-automotive-mobile-p-1600.avif 1600w,\n/assets/images/motion-control-suspension-automotive-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/motion-control-suspension-automotive-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "leverage-agency",
+      "url": "https://www.theleverage.io/",
+      "titleLine": "Leverage - Agency",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2026,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/leverage-agency-mobile.avif",
+          "srcset": "/assets/images/leverage-agency-mobile-p-500.avif 500w,\n/assets/images/leverage-agency-mobile-p-800.avif 800w,\n/assets/images/leverage-agency-mobile-p-1080.avif 1080w,\n/assets/images/leverage-agency-mobile-p-1600.avif 1600w,\n/assets/images/leverage-agency-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/leverage-agency-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "plasma-one-fintech",
+      "url": "https://www.plasma.to/one",
+      "titleLine": "Plasma One - Fintech",
+      "featured": true,
+      "companyType": "startup_b2c",
+      "statusLabel": "released",
+      "year": 2025,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/plasma-one-fintech-mobile.avif",
+          "srcset": "/assets/images/plasma-one-fintech-mobile-p-500.avif 500w,\n/assets/images/plasma-one-fintech-mobile-p-800.avif 800w,\n/assets/images/plasma-one-fintech-mobile-p-1080.avif 1080w,\n/assets/images/plasma-one-fintech-mobile-p-1600.avif 1600w,\n/assets/images/plasma-one-fintech-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/plasma-one-fintech-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "balkin-real-estate",
+      "url": "https://www.balkin.mc/",
+      "titleLine": "Balkin - Real Estate",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2025,
+      "month": 12,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/balkin-real-estate-mobile.avif",
+          "srcset": "/assets/images/balkin-real-estate-mobile-p-500.avif 500w,\n/assets/images/balkin-real-estate-mobile-p-800.avif 800w,\n/assets/images/balkin-real-estate-mobile-p-1080.avif 1080w,\n/assets/images/balkin-real-estate-mobile-p-1600.avif 1600w,\n/assets/images/balkin-real-estate-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/balkin-real-estate-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "thanks-ben",
+      "url": "https://www.thanksben.com/",
+      "titleLine": "Thanks Ben - Startup B2B",
+      "featured": true,
+      "companyType": "startup_b2b",
+      "statusLabel": "working_since",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform.avif",
+          "srcset": "/assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform-p-500.avif  500w,\n                                    /assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform-p-800.avif  800w,\n                                    /assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform.avif       1497w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/684160538f106c8010171baa_Screenshot_2025-06-05_at_11-12-29_Ben_The_Intelligent_Employee_Benefits_Platform_1_.avif"
+        }
+      }
+    },
+    {
+      "id": "customerz",
+      "url": "https://www.customerz.fr/",
+      "titleLine": "Customerz - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2025,
+      "designer": {
+        "name": "Cosmeek",
+        "url": "https://www.cosmeek.fr/"
+      },
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/682c34944d6b2917de4998a8_customerz-mobile.avif",
+          "srcset": "/assets/images/682c34944d6b2917de4998a8_customerz-mobile-p-500.avif   500w,\n                                    /assets/images/682c34944d6b2917de4998a8_customerz-mobile-p-800.avif   800w,\n                                    /assets/images/682c34944d6b2917de4998a8_customerz-mobile-p-1080.avif 1080w,\n                                    /assets/images/682c34944d6b2917de4998a8_customerz-mobile-p-1600.avif 1600w,\n                                    /assets/images/682c34944d6b2917de4998a8_customerz-mobile.avif        2994w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/682c34919e5b408da6b9d906_customerz-full_1_.avif"
+        }
+      }
+    },
+    {
+      "id": "altius",
+      "url": "https://www.altiuslabs.xyz/",
+      "titleLine": "Altius - Startup Blockchain",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2025,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/682f187419f17fd47514b15b_Screenshot_2025-05-22_at_14-26-06_Altius_Futureproof_your_Blockchain.avif",
+          "srcset": "/assets/images/682f187419f17fd47514b15b_Screenshot_2025-05-22_at_14-26-06_Altius_Futureproof_your_Blockchain-p-500.avif   500w,\n                                    /assets/images/682f187419f17fd47514b15b_Screenshot_2025-05-22_at_14-26-06_Altius_Futureproof_your_Blockchain-p-800.avif   800w,\n                                    /assets/images/682f187419f17fd47514b15b_Screenshot_2025-05-22_at_14-26-06_Altius_Futureproof_your_Blockchain-p-1080.avif 1080w,\n                                    /assets/images/682f187419f17fd47514b15b_Screenshot_2025-05-22_at_14-26-06_Altius_Futureproof_your_Blockchain.avif        2994w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/682f1870f55ef8df316ff57f_Screenshot_2025-05-22_at_14-26-18_Altius_Futureproof_your_Blockchain_1_.avif"
+        }
+      }
+    },
+    {
+      "id": "doctrio",
+      "url": "https://www.doctrio.com/",
+      "titleLine": "Doctrio - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/66018aeb6922371df320d696_Doctrio.avif",
+          "srcset": "/assets/images/66018aeb6922371df320d696_Doctrio-p-500.avif   500w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-800.avif   800w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-1080.avif 1080w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-1600.avif 1600w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio.avif        3024w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/66018ae44616da6a668a8ea7_doctrio-fullscreen.avif"
+        }
+      }
+    },
+    {
+      "id": "polar-analytics",
+      "url": "https://www.polaranalytics.com/",
+      "titleLine": "Polar Analytics - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653a6ad8bbd9309fc9e7e3f7_mobile.avif",
+          "srcset": "/assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-500.avif   500w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-800.avif   800w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-1080.avif 1080w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile.avif        1497w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653a6ad552cb18202958b2b2_desktop.avif"
+        }
+      }
+    },
+    {
+      "id": "explore314",
+      "url": "https://www.explore314.fr/",
+      "titleLine": "Explore314 - Video Agency",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653a76888a1820765f6656d6_desktop.gif",
+          "srcset": "",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653a76888a1820765f6656d6_desktop.gif"
+        }
+      }
+    },
+    {
+      "id": "ekoh",
+      "url": "https://www.ekoh.ch/",
+      "titleLine": "Ekoh - Social Media Agency",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2025,
+      "designer": {
+        "name": "Cosmeek",
+        "url": "https://www.cosmeek.fr/"
+      },
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/682c33ac649632ebaff54859_ekoh-mobile.avif",
+          "srcset": "/assets/images/682c33ac649632ebaff54859_ekoh-mobile-p-500.avif   500w,\n                                    /assets/images/682c33ac649632ebaff54859_ekoh-mobile-p-800.avif   800w,\n                                    /assets/images/682c33ac649632ebaff54859_ekoh-mobile-p-1080.avif 1080w,\n                                    /assets/images/682c33ac649632ebaff54859_ekoh-mobile-p-1600.avif 1600w,\n                                    /assets/images/682c33ac649632ebaff54859_ekoh-mobile.avif        2994w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/682c33b4a84e29f9cd5e42e0_ekoh-full.avif"
+        }
+      }
+    },
+    {
+      "id": "halesia",
+      "url": "https://www.halesia.fr/",
+      "titleLine": "Halesia - Lightning designer",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2025,
+      "designer": {
+        "name": "Cosmeek",
+        "url": "https://www.cosmeek.fr/"
+      },
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/682f16f5d9ccb33e51e1070f_Screenshot_2025-05-22_at_14-19-27_Halesia_Accueil.avif",
+          "srcset": "/assets/images/682f16f5d9ccb33e51e1070f_Screenshot_2025-05-22_at_14-19-27_Halesia_Accueil-p-500.avif   500w,\n                                    /assets/images/682f16f5d9ccb33e51e1070f_Screenshot_2025-05-22_at_14-19-27_Halesia_Accueil-p-800.avif   800w,\n                                    /assets/images/682f16f5d9ccb33e51e1070f_Screenshot_2025-05-22_at_14-19-27_Halesia_Accueil-p-1080.avif 1080w,\n                                    /assets/images/682f16f5d9ccb33e51e1070f_Screenshot_2025-05-22_at_14-19-27_Halesia_Accueil-p-1600.avif 1600w,\n                                    /assets/images/682f16f5d9ccb33e51e1070f_Screenshot_2025-05-22_at_14-19-27_Halesia_Accueil.avif        2994w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/682f16fa25cd4a26f6685ffa_Screenshot_2025-05-22_at_14-20-46_Halesia_Accueil_2_.avif"
+        }
+      }
+    },
+    {
+      "id": "distortion-film",
+      "url": "http://www.distorsionfilms.com",
+      "titleLine": "Distortion film - Video Agency",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/684162f87b9e3fcce0ee83ec_w0olejwh7unluvv96owb.avif",
+          "srcset": "",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/684162f87b9e3fcce0ee83ec_w0olejwh7unluvv96owb.avif"
+        }
+      }
+    },
+    {
+      "id": "roads",
+      "url": "https://www.roads.social/",
+      "titleLine": "Roads - Growth Agency",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/682f191a92d6c1a786a675db_Screenshot_2025-05-22_at_14-30-15_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_.avif",
+          "srcset": "/assets/images/682f191a92d6c1a786a675db_Screenshot_2025-05-22_at_14-30-15_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_-p-500.avif   500w,\n                                    /assets/images/682f191a92d6c1a786a675db_Screenshot_2025-05-22_at_14-30-15_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_-p-800.avif   800w,\n                                    /assets/images/682f191a92d6c1a786a675db_Screenshot_2025-05-22_at_14-30-15_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_-p-1080.avif 1080w,\n                                    /assets/images/682f191a92d6c1a786a675db_Screenshot_2025-05-22_at_14-30-15_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_-p-1600.avif 1600w,\n                                    /assets/images/682f191a92d6c1a786a675db_Screenshot_2025-05-22_at_14-30-15_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_.avif        2994w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/682f19175a6701ec09270e45_Screenshot_2025-05-22_at_14-30-26_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_1_.avif"
+        }
+      }
+    },
+    {
+      "id": "certalis",
+      "url": "https://certalis.com/",
+      "titleLine": "Certalis - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "working_since",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/682c2f77e6ee2bd779072f54_CleanShot_2025-05-20_at_09.26.54_2x.avif",
+          "srcset": "/assets/images/682c2f77e6ee2bd779072f54_CleanShot_2025-05-20_at_09.26.54_2x-p-500.avif   500w,\n                                    /assets/images/682c2f77e6ee2bd779072f54_CleanShot_2025-05-20_at_09.26.54_2x-p-800.avif   800w,\n                                    /assets/images/682c2f77e6ee2bd779072f54_CleanShot_2025-05-20_at_09.26.54_2x-p-1080.avif 1080w,\n                                    /assets/images/682c2f77e6ee2bd779072f54_CleanShot_2025-05-20_at_09.26.54_2x-p-1600.avif 1600w,\n                                    /assets/images/682c2f77e6ee2bd779072f54_CleanShot_2025-05-20_at_09.26.54_2x.avif        3024w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/682c2f6a51551bfd5ba8a7f9_certalis-full.avif"
+        }
+      }
+    },
+    {
+      "id": "minisoft",
+      "url": "https://www.minisoftinc.com/",
+      "titleLine": "Minisoft - B2B",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653bbc91146982d5d07fe558_mobile.avif",
+          "srcset": "/assets/images/653bbc91146982d5d07fe558_mobile-p-500.avif  500w,\n                                    /assets/images/653bbc91146982d5d07fe558_mobile-p-800.avif  800w,\n                                    /assets/images/653bbc91146982d5d07fe558_mobile.avif       1497w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653bbc8e5ba0348cfcd38a98_desktop-optimized.avif"
+        }
+      }
+    },
+    {
+      "id": "notion-everything",
+      "url": "https://www.notioneverything.com/",
+      "titleLine": "Notion Everything - Marketplace",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653bbabba73b64de2211aeb4_mobile.avif",
+          "srcset": "/assets/images/653bbabba73b64de2211aeb4_mobile-p-500.avif   500w,\n                                    /assets/images/653bbabba73b64de2211aeb4_mobile-p-800.avif   800w,\n                                    /assets/images/653bbabba73b64de2211aeb4_mobile-p-1080.avif 1080w,\n                                    /assets/images/653bbabba73b64de2211aeb4_mobile-p-1600.avif 1600w,\n                                    /assets/images/653bbabba73b64de2211aeb4_mobile.avif        2994w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653bbac0f6934a9e774868ca_desktop-optimized.avif"
+        }
+      }
+    },
+    {
+      "id": "gorgias",
+      "url": "https://www.gorgias.com/",
+      "titleLine": "Gorgias - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2022,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653a7834a436923f4c5ec309_gorgias-mobile.avif",
+          "srcset": "/assets/images/653a7834a436923f4c5ec309_gorgias-mobile-p-500.avif   500w,\n                                    /assets/images/653a7834a436923f4c5ec309_gorgias-mobile-p-800.avif   800w,\n                                    /assets/images/653a7834a436923f4c5ec309_gorgias-mobile-p-1080.avif 1080w,\n                                    /assets/images/653a7834a436923f4c5ec309_gorgias-mobile-p-1600.avif 1600w,\n                                    /assets/images/653a7834a436923f4c5ec309_gorgias-mobile-p-2000.avif 2000w,\n                                    /assets/images/653a7834a436923f4c5ec309_gorgias-mobile-p-2600.avif 2600w,\n                                    /assets/images/653a7834a436923f4c5ec309_gorgias-mobile.avif        3915w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653a78293854bb1cb9bd38d1_gorgias-desktop.avif"
+        }
+      }
+    }
+  ]
+}

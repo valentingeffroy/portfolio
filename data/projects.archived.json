@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "archivedAt": "2026-04-08",
+  "projects": [
+    {
+      "id": "veles",
+      "url": "https://www.getveles.com/",
+      "titleLine": "Veles - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/682c32465d650e2461aa2b98_Screenshot_2025-05-20_at_09-40-23_Veles_The_Sales_Calculator.avif",
+          "srcset": "/assets/images/682c32465d650e2461aa2b98_Screenshot_2025-05-20_at_09-40-23_Veles_The_Sales_Calculator-p-500.avif   500w,\n                                    /assets/images/682c32465d650e2461aa2b98_Screenshot_2025-05-20_at_09-40-23_Veles_The_Sales_Calculator-p-800.avif   800w,\n                                    /assets/images/682c32465d650e2461aa2b98_Screenshot_2025-05-20_at_09-40-23_Veles_The_Sales_Calculator-p-1080.avif 1080w,\n                                    /assets/images/682c32465d650e2461aa2b98_Screenshot_2025-05-20_at_09-40-23_Veles_The_Sales_Calculator-p-1600.avif 1600w,\n                                    /assets/images/682c32465d650e2461aa2b98_Screenshot_2025-05-20_at_09-40-23_Veles_The_Sales_Calculator.avif        2994w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/682c323660bd6c5e0fd367b3_Screenshot_2025-05-20_at_09-40-35_Veles_The_Sales_Calculator.avif"
+        }
+      }
+    },
+    {
+      "id": "wilmas",
+      "url": "https://www.wilmas.pizza/",
+      "titleLine": "Wilmas - Restaurant",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/66018a41b48da77d364e3af0_Wilmas-1.avif",
+          "srcset": "/assets/images/66018a41b48da77d364e3af0_Wilmas-1-p-500.avif   500w,\n                                    /assets/images/66018a41b48da77d364e3af0_Wilmas-1-p-800.avif   800w,\n                                    /assets/images/66018a41b48da77d364e3af0_Wilmas-1-p-1080.avif 1080w,\n                                    /assets/images/66018a41b48da77d364e3af0_Wilmas-1-p-1600.avif 1600w,\n                                    /assets/images/66018a41b48da77d364e3af0_Wilmas-1-p-2000.avif 2000w,\n                                    /assets/images/66018a41b48da77d364e3af0_Wilmas-1.avif        3024w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/660189e17003a216533d9405_Wilmas.-Fullscreen.avif"
+        }
+      }
+    },
+    {
+      "id": "14peaks-capital",
+      "url": "https://14peaks.capital/",
+      "titleLine": "14Peaks Capital - VC",
+      "featured": false,
+      "companyType": "vc",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653a7d767db3b02345f11383_Desktop.avif",
+          "srcset": "/assets/images/653a7d767db3b02345f11383_Desktop-p-500.avif   500w,\n                                    /assets/images/653a7d767db3b02345f11383_Desktop-p-800.avif   800w,\n                                    /assets/images/653a7d767db3b02345f11383_Desktop-p-1080.avif 1080w,\n                                    /assets/images/653a7d767db3b02345f11383_Desktop.avif        1497w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653a7d497bb5c936335ab405_Desktop.avif"
+        }
+      }
+    },
+    {
+      "id": "joubert-voyages",
+      "url": "https://www.joubert-voyages.com/",
+      "titleLine": "Joubert Voyages - Travel Agency",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653bb553796093d85a49a97a_mobile.avif",
+          "srcset": "/assets/images/653bb553796093d85a49a97a_mobile-p-500.avif  500w,\n                                    /assets/images/653bb553796093d85a49a97a_mobile-p-800.avif  800w,\n                                    /assets/images/653bb553796093d85a49a97a_mobile.avif       1198w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653bb55004fa5d5faecd9e22_desktop.avif"
+        }
+      }
+    },
+    {
+      "id": "tegus",
+      "url": "https://www.tegus.com/",
+      "titleLine": "Tegus - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2022,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653bb6daa6c34d5e72a76c48_mobile.avif",
+          "srcset": "/assets/images/653bb6daa6c34d5e72a76c48_mobile-p-500.avif   500w,\n                                    /assets/images/653bb6daa6c34d5e72a76c48_mobile-p-800.avif   800w,\n                                    /assets/images/653bb6daa6c34d5e72a76c48_mobile-p-1080.avif 1080w,\n                                    /assets/images/653bb6daa6c34d5e72a76c48_mobile-p-1600.avif 1600w,\n                                    /assets/images/653bb6daa6c34d5e72a76c48_mobile-p-2000.avif 2000w,\n                                    /assets/images/653bb6daa6c34d5e72a76c48_mobile.avif        3479w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653bb6d780e7a37043f79b29_desktop.avif"
+        }
+      }
+    }
+  ]
+}

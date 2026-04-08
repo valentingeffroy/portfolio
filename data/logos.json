@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "logos": [
+    {
+      "id": "zoo-de-guadeloupe-tourism",
+      "src": "/assets/images/zoo-de-guadeloupe-tourism-logo.svg",
+      "alt": "Zoo de Guadeloupe - Tourism"
+    },
+    {
+      "id": "point-nine-vc",
+      "src": "/assets/images/point-nine-vc-logo.svg",
+      "alt": "Point Nine - VC"
+    },
+    {
+      "id": "motion-control-suspension-automotive",
+      "src": "/assets/images/motion-control-suspension-automotive-logo.svg",
+      "alt": "Motion Control Suspension - Automotive"
+    },
+    {
+      "id": "leverage-agency",
+      "src": "/assets/images/leverage-agency-logo.svg",
+      "alt": "Leverage - Agency"
+    },
+    {
+      "id": "plasma-one-fintech",
+      "src": "/assets/images/plasma-one-fintech-logo.svg",
+      "alt": "Plasma One - Fintech"
+    },
+    {
+      "id": "balkin-real-estate",
+      "src": "/assets/images/balkin-real-estate-logo.svg",
+      "alt": "Balkin - Real Estate"
+    },
+    {
+      "id": "thanks-ben",
+      "src": "/assets/images/68415ff7fa40e8b68b29daf3_thanbsben-logo.svg",
+      "alt": "Thanks Ben - Startup B2B"
+    },
+    {
+      "id": "altius",
+      "src": "/assets/images/682f185131f25b2db8e47330_altius-logo.svg",
+      "alt": "Altius - Startup Blockchain"
+    },
+    {
+      "id": "customerz",
+      "src": "/assets/images/682c34a95ac4ac97d5b0c4a0_customerz-logo.svg",
+      "alt": "Customerz - Startup B2B"
+    },
+    {
+      "id": "doctrio",
+      "src": "/assets/images/6601837ba02c39ac00f88e8c_doctrio_logo.svg",
+      "alt": "Doctrio - Startup B2B"
+    },
+    {
+      "id": "explore314",
+      "src": "/assets/images/653a77b85495885dea64f41b_explore314.svg",
+      "alt": "Explore314 - Video Agency"
+    },
+    {
+      "id": "polar-analytics",
+      "src": "/assets/images/653a785252cb18202966bc14_polar-analytics.svg",
+      "alt": "Polar Analytics - Startup B2B"
+    },
+    {
+      "id": "distortion-film",
+      "src": "/assets/images/684165406505ce7a9f522626_image_16).png",
+      "alt": "Distortion film - Video Agency"
+    },
+    {
+      "id": "roads",
+      "src": "/assets/images/682f19473e29cdb352dd9433_raods-logo.svg",
+      "alt": "Roads - Growth Agency"
+    },
+    {
+      "id": "halesia",
+      "src": "/assets/images/682f175a1d5a82a48f5ce96f_logo-halesia.svg",
+      "alt": "Halesia - Lightning designer"
+    },
+    {
+      "id": "ekoh",
+      "src": "/assets/images/682c3306f9526a8afa1d3272_ekoh.svg",
+      "alt": "Ekoh - Social Media Agency"
+    },
+    {
+      "id": "certalis",
+      "src": "/assets/images/682c2f93a37f24daaabe7a62_certalis.svg",
+      "alt": "Certalis - Startup B2B"
+    },
+    {
+      "id": "minisoft",
+      "src": "/assets/images/653bbc88d3e7741f9b329154_logo.svg",
+      "alt": "Minisoft - B2B"
+    },
+    {
+      "id": "notion-everything",
+      "src": "/assets/images/653bbac307d0ab085c0ddbec_logo.svg",
+      "alt": "Notion Everything - Marketplace"
+    },
+    {
+      "id": "gorgias",
+      "src": "/assets/images/653a782dff8d8362aa1e16ab_gorgias.svg",
+      "alt": "Gorgias - Startup B2B"
+    }
+  ]
+}

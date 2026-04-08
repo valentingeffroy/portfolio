@@ -2,6 +2,24 @@ function getCopyButtonLabel(button) {
   return button?.querySelector(":scope > div:not(.icon-embed-small)") ?? null;
 }
 
+function getSiteLang() {
+  const docLang = document.documentElement.getAttribute("lang") || "en";
+  return docLang.toLowerCase().startsWith("fr") ? "fr" : "en";
+}
+
+function captureConversion(eventName, properties) {
+  try {
+    if (typeof window.posthog?.capture !== "function") return;
+    window.posthog.capture(eventName, {
+      lang: getSiteLang(),
+      path: window.location.pathname,
+      ...(properties || {}),
+    });
+  } catch {
+    // no-op
+  }
+}
+
 function setButtonCopiedState(button, isCopied) {
   if (!button) return;
 
@@ -59,10 +77,41 @@ document.addEventListener("click", async (e) => {
     await copyText(text);
     setButtonCopiedState(button, true);
     window.setTimeout(() => setButtonCopiedState(button, false), 1500);
+    captureConversion("conversion_email_copy", { method: "clipboard" });
   } catch {
     // clipboard blocked
   }
 });
+
+document.addEventListener(
+  "click",
+  (e) => {
+    const el = e.target instanceof Element ? e.target : null;
+    if (!el) return;
+
+    const a = el.closest('a[href^="mailto:"]');
+    if (a) {
+      captureConversion("conversion_email_click", {
+        href: a.getAttribute("href") || "",
+        placement: a.closest("nav")
+          ? "nav"
+          : a.closest("footer")
+            ? "footer"
+            : "page",
+      });
+      return;
+    }
+
+    const cta = el.closest('a.button[href^="mailto:"], a.button.w-button[href^="mailto:"]');
+    if (cta) {
+      captureConversion("conversion_work_with_me_click", {
+        href: cta.getAttribute("href") || "",
+        text: (cta.textContent || "").trim().slice(0, 80),
+      });
+    }
+  },
+  { capture: true },
+);
 
 /** Wrap loose text nodes in .text_blurred with .text_blur (desktop only; matches Webflow IX intent). */
 function applyTestimonialBlurWrapping() {
@@ -84,8 +133,13 @@ function applyTestimonialBlurWrapping() {
 }
 
 function isHomePage() {
-  const p = window.location.pathname;
-  return p === "/" || p.toLowerCase() === "/index.html";
+  const p = (window.location.pathname.replace(/\/$/, "") || "/").toLowerCase();
+  return (
+    p === "/" ||
+    p === "/index.html" ||
+    p === "/fr" ||
+    p === "/fr/index.html"
+  );
 }
 
 /** Logo: sur la home, clic sans effet ; ailleurs, `href="/"` mène à l'accueil. */
@@ -117,8 +171,12 @@ function initBrandHomeBehavior() {
       if (url.origin !== window.location.origin) return;
 
       const norm = url.pathname.replace(/\/$/, "") || "/";
+      const n = norm.toLowerCase();
       const targetsHome =
-        norm === "/" || norm.toLowerCase() === "/index.html";
+        n === "/" ||
+        n === "/index.html" ||
+        n === "/fr" ||
+        n === "/fr/index.html";
       if (!targetsHome) return;
 
       if (isHomePage()) {
@@ -178,7 +236,18 @@ function initMobileNav() {
     root.classList.toggle("is-mobile-nav-open", open);
     button.classList.toggle("w--open", open);
     button.setAttribute("aria-expanded", String(open));
-    button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    const docLang = document.documentElement.getAttribute("lang") || "en";
+    const isFr = docLang.toLowerCase().startsWith("fr");
+    button.setAttribute(
+      "aria-label",
+      open
+        ? isFr
+          ? "Fermer le menu"
+          : "Close menu"
+        : isFr
+          ? "Ouvrir le menu"
+          : "Open menu",
+    );
     document.body.classList.toggle("is-nav-open", open);
     if (overlay) {
       overlay.setAttribute("aria-hidden", open ? "false" : "true");
@@ -236,12 +305,140 @@ function initMobileNav() {
   setOpen(false);
 }
 
+function slugify(value) {
+  return (value || "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+function extractProjectCategory(slide) {
+  const h3 = slide.querySelector("h3");
+  const title = (h3?.textContent || "").trim();
+  if (!title) return null;
+
+  const parts = title.split(" - ");
+  if (parts.length < 2) return null;
+
+  const label = parts[parts.length - 1].trim();
+  if (!label) return null;
+
+  const slug = slugify(label);
+  if (!slug) return null;
+
+  return { slug, label };
+}
+
+function initProjectFilters() {
+  const filtersRoot = document.querySelector("[data-project-filters]");
+  if (!filtersRoot) return;
+
+  const swiperRoot = document.getElementById("basic-swiper");
+  const swiperWrapper = swiperRoot?.querySelector(".swiper-wrapper");
+  if (!swiperRoot || !swiperWrapper) return;
+
+  const slides = Array.from(swiperWrapper.querySelectorAll(".swiper-slide"));
+  if (slides.length === 0) return;
+
+  const allLabel =
+    filtersRoot.getAttribute("data-all-label") ||
+    (getSiteLang() === "fr" ? "Tous" : "All");
+
+  const allButton = filtersRoot.querySelector('[data-project-filter="__all"]');
+  if (allButton) {
+    allButton.textContent = allLabel;
+  }
+
+  const categoryMap = new Map();
+  const categoryCounts = new Map();
+  for (const slide of slides) {
+    const category = extractProjectCategory(slide);
+    if (!category) continue;
+    if (!categoryMap.has(category.slug)) {
+      categoryMap.set(category.slug, category.label);
+    }
+    categoryCounts.set(category.slug, (categoryCounts.get(category.slug) || 0) + 1);
+  }
+
+  const existingFilterButtons = new Set(
+    Array.from(filtersRoot.querySelectorAll("[data-project-filter]")).map((el) =>
+      el.getAttribute("data-project-filter"),
+    ),
+  );
+
+  const maxFilters = Math.max(
+    0,
+    Math.min(5, Number.parseInt(filtersRoot.getAttribute("data-max-filters") || "5", 10) || 5),
+  );
+
+  const categories = Array.from(categoryMap.entries())
+    .map(([slug, label]) => ({
+      slug,
+      label,
+      count: categoryCounts.get(slug) || 0,
+    }))
+    .sort((a, b) => {
+      if (b.count !== a.count) return b.count - a.count;
+      return a.label.localeCompare(b.label);
+    })
+    .slice(0, maxFilters);
+
+  for (const { slug, label } of categories) {
+    if (existingFilterButtons.has(slug)) continue;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "projects-filters__button";
+    btn.setAttribute("data-project-filter", slug);
+    btn.setAttribute("aria-pressed", "false");
+    btn.textContent = label;
+    filtersRoot.appendChild(btn);
+  }
+
+  function setActiveFilter(slug) {
+    const isAll = slug === "__all";
+
+    filtersRoot.querySelectorAll("[data-project-filter]").forEach((btn) => {
+      const b = btn;
+      const active = (b.getAttribute("data-project-filter") || "") === slug;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+
+    for (const slide of slides) {
+      const category = extractProjectCategory(slide);
+      const match = isAll ? true : category?.slug === slug;
+      slide.classList.toggle("is-filtered-out", !match);
+    }
+
+    const swiper = window.projectsSwiper;
+    if (swiper && typeof swiper.update === "function") {
+      swiper.update();
+      if (typeof swiper.slideTo === "function") swiper.slideTo(0);
+    }
+  }
+
+  filtersRoot.addEventListener("click", (e) => {
+    const target = e.target instanceof Element ? e.target : null;
+    const button = target?.closest("[data-project-filter]");
+    if (!button || !filtersRoot.contains(button)) return;
+
+    e.preventDefault();
+
+    const slug = button.getAttribute("data-project-filter") || "__all";
+    setActiveFilter(slug);
+  });
+}
+
 function boot() {
   initBrandHomeBehavior();
   applyTestimonialBlurWrapping();
   window.addEventListener("resize", applyTestimonialBlurWrapping);
   initNavHeaderBackground();
   initMobileNav();
+  initProjectFilters();
 }
 
 if (document.readyState === "loading") {

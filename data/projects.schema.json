@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PortfolioProjects",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "projects"],
+  "properties": {
+    "version": { "type": "integer", "minimum": 1 },
+    "projects": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/project" }
+    }
+  },
+  "$defs": {
+    "companyType": {
+      "type": "string",
+      "enum": [
+        "startup_b2b",
+        "startup_b2c",
+        "agency",
+        "vc",
+        "saas",
+        "enterprise",
+        "ngo",
+        "other"
+      ]
+    },
+    "statusLabel": { "type": "string", "enum": ["released", "working_since"] },
+    "designer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 }
+      }
+    },
+    "images": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mobile", "desktopFull"],
+      "properties": {
+        "mobile": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src", "srcset", "sizes", "alt"],
+          "properties": {
+            "src": { "type": "string", "minLength": 1 },
+            "srcset": { "type": "string" },
+            "sizes": { "type": "string", "minLength": 1 },
+            "alt": { "type": "string", "minLength": 1 }
+          }
+        },
+        "desktopFull": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["backgroundImageUrl"],
+          "properties": {
+            "backgroundImageUrl": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "url",
+        "titleLine",
+        "companyType",
+        "statusLabel",
+        "year",
+        "images"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "url": { "type": "string", "minLength": 1 },
+        "titleLine": { "type": "string", "minLength": 1 },
+        "featured": { "type": "boolean", "default": false },
+        "companyType": { "$ref": "#/$defs/companyType" },
+        "statusLabel": { "$ref": "#/$defs/statusLabel" },
+        "year": { "type": "integer", "minimum": 2000, "maximum": 2100 },
+        "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "designer": { "$ref": "#/$defs/designer" },
+        "contributions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "caseStudyNotes": { "type": "string" },
+        "images": { "$ref": "#/$defs/images" }
+      }
+    }
+  }
+}
+

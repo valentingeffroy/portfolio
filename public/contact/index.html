@@ -5,9 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact — Valentin Geffroy</title>
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="/css/webflow.shared.css" />
-    <link rel="stylesheet" href="/css/webflow.page.css" />
-    <link rel="stylesheet" href="/css/overrides.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <!-- PostHog (cookieless-ish, conversion-only) -->
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              2 == o.length && ((t = t[o[0]]), (e = o[1]));
+              t[e] = function () {
+                t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+              };
+            }
+            ((p = t.createElement("script")).type = "text/javascript"),
+              (p.async = !0),
+              (p.src = s.api_host + "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
+                p,
+                r,
+              );
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return (
+                    "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                  );
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "capture identify alias people.set people.set_once people.unset people.increment people.append people.remove people.group set_group reset debug on off opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing register register_once unregister group".split(
+                    " ",
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("phc_psu5PsV4RotPyD96MhaiDi55v3L9oA9x2Agj6RCQC5zX", {
+        api_host: "https://eu.i.posthog.com",
+        autocapture: false,
+        capture_pageview: true,
+        disable_session_recording: true,
+        persistence: "memory",
+      });
+    </script>
   </head>
   <body>
     <main class="page-wrapper">
@@ -48,6 +102,23 @@
         </div>
       </section>
     </main>
+    <script src="/js/site.js?v=nav4" defer=""></script>
+    <script>
+      document.addEventListener(
+        "submit",
+        () => {
+          try {
+            window.posthog?.capture?.("conversion_contact_form_submit", {
+              lang: "fr",
+              path: window.location.pathname,
+            });
+          } catch {
+            // no-op
+          }
+        },
+        { capture: true },
+      );
+    </script>
   </body>
 </html>
 
