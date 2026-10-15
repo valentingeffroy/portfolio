@@ -42,7 +42,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/plasma-one-fintech-desktop-full.avif"
         }
-      }
+      },
+      "month": 11
     },
     {
       "id": "thanks-ben",
@@ -86,7 +87,8 @@
           "width": 1440,
           "height": 2095
         }
-      }
+      },
+      "month": 8
     },
     {
       "id": "cloud-iam-saas",
@@ -109,7 +111,8 @@
           "width": 1440,
           "height": 7123
         }
-      }
+      },
+      "month": 5
     },
     {
       "id": "decibell-agence-h-tellerie",
@@ -132,7 +135,8 @@
           "width": 1440,
           "height": 8393
         }
-      }
+      },
+      "month": 2
     },
     {
       "id": "leverage-agency",
@@ -153,7 +157,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/leverage-agency-desktop-full.avif"
         }
-      }
+      },
+      "month": 5
     },
     {
       "id": "motion-control-suspension-automotive",
@@ -252,7 +257,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682c34919e5b408da6b9d906_customerz-full_1_.avif"
         }
-      }
+      },
+      "month": 2
     },
     {
       "id": "altius",
@@ -273,7 +279,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682f1870f55ef8df316ff57f_Screenshot_2025-05-22_at_14-26-18_Altius_Futureproof_your_Blockchain_1_.avif"
         }
-      }
+      },
+      "month": 5
     },
     {
       "id": "ekoh",
@@ -298,7 +305,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682c33b4a84e29f9cd5e42e0_ekoh-full.avif"
         }
-      }
+      },
+      "month": 5
     },
     {
       "id": "halesia",
@@ -323,7 +331,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682f16fa25cd4a26f6685ffa_Screenshot_2025-05-22_at_14-20-46_Halesia_Accueil_2_.avif"
         }
-      }
+      },
+      "month": 2
     },
     {
       "id": "doctrio",
@@ -344,7 +353,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/66018ae44616da6a668a8ea7_doctrio-fullscreen.avif"
         }
-      }
+      },
+      "month": 11
     },
     {
       "id": "distortion-film",
@@ -365,7 +375,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/684162f87b9e3fcce0ee83ec_w0olejwh7unluvv96owb.avif"
         }
-      }
+      },
+      "month": 11
     },
     {
       "id": "roads",
@@ -374,7 +385,7 @@
       "featured": false,
       "companyType": "agency",
       "statusLabel": "released",
-      "year": 2024,
+      "year": 2026,
       "contributions": [],
       "images": {
         "mobile": {
@@ -386,7 +397,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682f19175a6701ec09270e45_Screenshot_2025-05-22_at_14-30-26_Roads_-_Agence_SEA___SMA_-_120_marques_accompagne_es_1_1_.avif"
         }
-      }
+      },
+      "month": 8
     },
     {
       "id": "certalis",
@@ -395,7 +407,7 @@
       "featured": false,
       "companyType": "startup_b2b",
       "statusLabel": "working_since",
-      "year": 2024,
+      "year": 2026,
       "contributions": [],
       "images": {
         "mobile": {
@@ -407,7 +419,8 @@
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682c2f6a51551bfd5ba8a7f9_certalis-full.avif"
         }
-      }
+      },
+      "month": 8
     },
     {
       "id": "polar-analytics",

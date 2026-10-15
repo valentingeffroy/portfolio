@@ -270,7 +270,7 @@ a,
   }
 
   /* Barre du haut blanche quand le menu est ouvert (comme le panneau du menu) */
-  #navbar.is-mobile-nav-open .wrapper-nav-content {
+  .navbar.w-nav.site-header__nav.is-mobile-nav-open {
     background-color: #fff !important;
   }
 
