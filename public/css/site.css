@@ -4717,5 +4717,9 @@ body.is-nav-open {
   white-space: nowrap;
   border: 0;
 }
+/* Avatar du CTA: width/height HTML pour réserver la place, ratio préservé */
+.image_button {
+  width: auto;
+}
 /* ===== END overrides.css ===== */
 
