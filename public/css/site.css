@@ -4497,6 +4497,17 @@ a,
     background-color: #fff !important;
   }
 
+  /* Menu ouvert : pas de filets verticaux du conteneur sur la barre */
+  .navbar.w-nav.site-header__nav.is-mobile-nav-open .border-container-left-right {
+    border-color: transparent;
+  }
+
+  /* Toggle de langue du menu mobile : pas de marge haute, 0.5rem en bas */
+  #navbar.is-mobile-nav-open ._w-toggle_language.is-mobile {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
   #navbar.is-mobile-nav-open .border-bottom {
     position: relative;
     z-index: 1001;

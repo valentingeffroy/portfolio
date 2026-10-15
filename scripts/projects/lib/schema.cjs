@@ -45,6 +45,9 @@ const Project = z.object({
   statusLabel: StatusLabel,
   year: z.number().int().min(2000).max(2100),
   month: z.number().int().min(1).max(12).optional(),
+  // Date utilisée uniquement pour le tri (ex: projet sorti en 2024 mais en mise à jour).
+  sortYear: z.number().int().min(2000).max(2100).optional(),
+  sortMonth: z.number().int().min(1).max(12).optional(),
   designer: Designer.optional(),
   contributions: z.array(z.string()).default([]),
   caseStudyNotes: z.string().optional(),

@@ -16,15 +16,18 @@ async function readHtml(filePath) {
 }
 
 function sortProjects(projects) {
-  // Featured first, then year desc, then month desc, then title.
+  // Featured first, then (sortYear ?? year) desc, then (sortMonth ?? month) desc, then title.
+  const y = (p) => p.sortYear ?? p.year;
+  const m = (p) => {
+    const v = p.sortMonth ?? p.month;
+    return Number.isFinite(v) ? v : 0;
+  };
   return [...projects].sort((a, b) => {
     const af = Boolean(a.featured);
     const bf = Boolean(b.featured);
     if (af !== bf) return af ? -1 : 1;
-    if (a.year !== b.year) return b.year - a.year;
-    const am = Number.isFinite(a.month) ? a.month : 0;
-    const bm = Number.isFinite(b.month) ? b.month : 0;
-    if (am !== bm) return bm - am;
+    if (y(a) !== y(b)) return y(b) - y(a);
+    if (m(a) !== m(b)) return m(b) - m(a);
     return a.titleLine.localeCompare(b.titleLine);
   });
 }
