@@ -62,6 +62,12 @@ function renderSlide({ locale, project, index, total }) {
     : `
                                   <div class="project_mentions w-dyn-bind-empty w-richtext"></div>`;
 
+  // Les 2 premières cartes sont visibles au chargement sur tablette/mobile (l'<img> est masquée sur desktop).
+  const eager = index < 2;
+  // ponytail: dimensions de la capture mobile (iPhone viewport) ; le CSS impose le ratio affiché.
+  const mobileWidth = Number(mobile.width) || 1179;
+  const mobileHeight = Number(mobile.height) || 1977;
+
   const srcset = (mobile.srcset || "").trim();
   const srcsetAttr = srcset
     ? `srcset="
@@ -75,13 +81,15 @@ ${srcset
     : "";
 
   return `
-                        <div role="group" class="swiper-slide w-dyn-item" aria-label="${index + 1} / ${total}">
+                        <div role="listitem" class="swiper-slide w-dyn-item" aria-label="${index + 1} / ${total}">
                           <div class="slide_project swiper-js">
                             <div data-w-id="e71a52e2-9918-d284-d3a8-165eb04de3b5" class="_w-project${animSpeedClass}">
-                              <a href="${escapeHtml(project.url)}" target="_blank" class="link__project w-inline-block"></a>
+                              <a href="${escapeHtml(project.url)}" target="_blank" rel="noopener" aria-label="${viewWebsite} : ${escapeHtml(project.titleLine)}" class="link__project w-inline-block"></a>
                               <div>
                                 <img
-                                  loading="lazy"
+                                  loading="${eager ? "eager" : "lazy"}"${index === 0 ? '\n                                  fetchpriority="high"' : ""}
+                                  width="${mobileWidth}"
+                                  height="${mobileHeight}"
                                   src="${escapeHtml(mobile.src)}"
                                   alt="${escapeHtml(mobile.alt || mobileAlt)}"
                                   sizes="${escapeHtml(mobile.sizes)}"
