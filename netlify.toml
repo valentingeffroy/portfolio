@@ -25,3 +25,9 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+
+# page contact supprimée
+[[redirects]]
+  from = "/contact/*"
+  to = "/"
+  status = 301
