@@ -32,8 +32,37 @@ async function bestEffortAcceptCookies(page) {
     return false;
   }
 
+  // Cookiebot (Usercentrics): ids stables, bouton "Refuser"/"Tout autoriser".
+  for (const sel of [
+    "#CybotCookiebotDialogBodyButtonDecline",
+    "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+  ]) {
+    const el = page.locator(sel).first();
+    try {
+      if (await el.isVisible({ timeout: 800 })) {
+        await el.click({ timeout: 1500 });
+        return true;
+      }
+    } catch {
+      // ignore
+    }
+  }
+
   // First pass: click preferred accept buttons.
   if (await clickFirstMatching(prefer)) return true;
+
+  // Axeptio & co: le bouton n'est pas toujours un role=button, on cherche par texte.
+  for (const re of [/^accepter et fermer$/i, /^tout accepter$/i, /^accept all$/i]) {
+    const el = page.getByText(re).first();
+    try {
+      if (await el.isVisible({ timeout: 800 })) {
+        await el.click({ timeout: 1500 });
+        return true;
+      }
+    } catch {
+      // ignore
+    }
+  }
 
   // Second pass: broader matching.
   for (const re of candidates) {
@@ -84,6 +113,8 @@ div[id*="consent" i][style*="position: fixed" i],
 div[class*="consent" i][style*="position: fixed" i],
 div[id*="cmp" i][style*="position: fixed" i],
 div[class*="cmp" i][style*="position: fixed" i],
+#CybotCookiebotDialog,
+#CybotCookiebotDialogBodyUnderlay,
 #axeptio_overlay,
 #axeptio_main_button,
 [id^="axeptio" i],
