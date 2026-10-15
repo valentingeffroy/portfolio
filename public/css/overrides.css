@@ -269,6 +269,11 @@ a,
     z-index: 2000;
   }
 
+  /* Barre du haut blanche quand le menu est ouvert (comme le panneau du menu) */
+  #navbar.is-mobile-nav-open .wrapper-nav-content {
+    background-color: #fff !important;
+  }
+
   #navbar.is-mobile-nav-open .border-bottom {
     position: relative;
     z-index: 1001;
