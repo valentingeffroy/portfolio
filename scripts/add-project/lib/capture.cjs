@@ -15,7 +15,7 @@ async function bestEffortAcceptCookies(page) {
   ];
 
   // Prefer "accept all" style; avoid reject/decline unless it's the only visible action.
-  const prefer = [/accept all/i, /tout accepter/i, /^accept$/i, /^accepter$/i, /i agree/i];
+  const prefer = [/accept all/i, /tout accepter/i, /accepter et fermer/i, /^accept$/i, /^accepter$/i, /i agree/i];
 
   async function clickFirstMatching(names) {
     for (const re of names) {
@@ -84,6 +84,10 @@ div[id*="consent" i][style*="position: fixed" i],
 div[class*="consent" i][style*="position: fixed" i],
 div[id*="cmp" i][style*="position: fixed" i],
 div[class*="cmp" i][style*="position: fixed" i],
+#axeptio_overlay,
+#axeptio_main_button,
+[id^="axeptio" i],
+[class*="axeptio" i],
 div[id*="onetrust" i],
 div[class*="onetrust" i],
 div[id*="didomi" i],

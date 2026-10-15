@@ -2,6 +2,11 @@
   "version": 1,
   "logos": [
     {
+      "id": "le-m-dia-orientation-m-dia",
+      "src": "/assets/images/le-m-dia-orientation-m-dia-logo.svg",
+      "alt": "Le Média Orientation"
+    },
+    {
       "id": "cloud-iam-saas",
       "src": "/assets/images/cloud-iam-saas-logo.svg",
       "alt": "Cloud IAM"
@@ -10,11 +15,6 @@
       "id": "decibell-agence-h-tellerie",
       "src": "/assets/images/decibell-agence-h-tellerie-logo.svg",
       "alt": "Decibell"
-    },
-    {
-      "id": "le-m-dia-orientation-m-dia",
-      "src": "/assets/images/le-m-dia-orientation-m-dia-logo.svg",
-      "alt": "Le Média Orientation"
     },
     {
       "id": "zoo-de-guadeloupe-tourism",

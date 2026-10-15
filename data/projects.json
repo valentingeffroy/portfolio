@@ -2,6 +2,93 @@
   "version": 1,
   "projects": [
     {
+      "id": "point-nine-vc",
+      "url": "https://www.pointnine.com/",
+      "titleLine": "Point Nine - VC",
+      "featured": false,
+      "companyType": "vc",
+      "statusLabel": "released",
+      "year": 2026,
+      "month": 2,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/point-nine-vc-mobile.avif",
+          "srcset": "/assets/images/point-nine-vc-mobile-p-500.avif 500w,\n/assets/images/point-nine-vc-mobile-p-800.avif 800w,\n/assets/images/point-nine-vc-mobile-p-1080.avif 1080w,\n/assets/images/point-nine-vc-mobile-p-1600.avif 1600w,\n/assets/images/point-nine-vc-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/point-nine-vc-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "plasma-one-fintech",
+      "url": "https://www.plasma.to/one",
+      "titleLine": "Plasma One - Fintech",
+      "featured": false,
+      "companyType": "startup_b2c",
+      "statusLabel": "released",
+      "year": 2025,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/plasma-one-fintech-mobile.avif",
+          "srcset": "/assets/images/plasma-one-fintech-mobile-p-500.avif 500w,\n/assets/images/plasma-one-fintech-mobile-p-800.avif 800w,\n/assets/images/plasma-one-fintech-mobile-p-1080.avif 1080w,\n/assets/images/plasma-one-fintech-mobile-p-1600.avif 1600w,\n/assets/images/plasma-one-fintech-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/plasma-one-fintech-desktop-full.avif"
+        }
+      }
+    },
+    {
+      "id": "thanks-ben",
+      "url": "https://www.thanksben.com/",
+      "titleLine": "Thanks Ben - Startup B2B",
+      "featured": true,
+      "companyType": "startup_b2b",
+      "statusLabel": "working_since",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/thanks-ben-mobile.avif",
+          "srcset": "/assets/images/thanks-ben-mobile-p-500.avif 500w,\n/assets/images/thanks-ben-mobile-p-800.avif 800w,\n/assets/images/thanks-ben-mobile-p-1080.avif 1080w,\n/assets/images/thanks-ben-mobile-p-1600.avif 1600w,\n/assets/images/thanks-ben-mobile.avif 1179w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/684160538f106c8010171baa_Screenshot_2025-06-05_at_11-12-29_Ben_The_Intelligent_Employee_Benefits_Platform_1_.avif"
+        }
+      }
+    },
+    {
+      "id": "le-m-dia-orientation-m-dia",
+      "url": "https://www.lemediaorientation.fr/",
+      "titleLine": "Le Média Orientation - Média",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2026,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/le-m-dia-orientation-m-dia-mobile.avif",
+          "srcset": "/assets/images/le-m-dia-orientation-m-dia-mobile-p-500.avif 500w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-800.avif 800w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-1080.avif 1080w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-1600.avif 1600w,\n/assets/images/le-m-dia-orientation-m-dia-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/le-m-dia-orientation-m-dia-desktop-full.avif",
+          "width": 1440,
+          "height": 2095
+        }
+      }
+    },
+    {
       "id": "cloud-iam-saas",
       "url": "https://www.cloud-iam.com/",
       "titleLine": "Cloud IAM - SaaS",
@@ -48,73 +135,23 @@
       }
     },
     {
-      "id": "le-m-dia-orientation-m-dia",
-      "url": "https://www.lemediaorientation.fr/",
-      "titleLine": "Le Média Orientation - Média",
+      "id": "leverage-agency",
+      "url": "https://www.theleverage.io/",
+      "titleLine": "Leverage - Agency",
       "featured": false,
-      "companyType": "other",
+      "companyType": "agency",
       "statusLabel": "released",
       "year": 2026,
       "contributions": [],
       "images": {
         "mobile": {
-          "src": "/assets/images/le-m-dia-orientation-m-dia-mobile.avif",
-          "srcset": "/assets/images/le-m-dia-orientation-m-dia-mobile-p-500.avif 500w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-800.avif 800w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-1080.avif 1080w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-1600.avif 1600w,\n/assets/images/le-m-dia-orientation-m-dia-mobile.avif 2000w",
+          "src": "/assets/images/leverage-agency-mobile.avif",
+          "srcset": "/assets/images/leverage-agency-mobile-p-500.avif 500w,\n/assets/images/leverage-agency-mobile-p-800.avif 800w,\n/assets/images/leverage-agency-mobile-p-1080.avif 1080w,\n/assets/images/leverage-agency-mobile-p-1600.avif 1600w,\n/assets/images/leverage-agency-mobile.avif 2000w",
           "sizes": "100vw",
           "alt": "Website screenshot"
         },
         "desktopFull": {
-          "backgroundImageUrl": "/assets/images/le-m-dia-orientation-m-dia-desktop-full.avif",
-          "width": 1440,
-          "height": 2095
-        }
-      }
-    },
-    {
-      "id": "zoo-de-guadeloupe-tourism",
-      "url": "https://www.zoodeguadeloupe.com/",
-      "titleLine": "Zoo de Guadeloupe - Tourism",
-      "featured": false,
-      "companyType": "other",
-      "statusLabel": "released",
-      "year": 2025,
-      "month": 10,
-      "designer": {
-        "name": "Digidop",
-        "url": "https://www.digidop.com/"
-      },
-      "contributions": [],
-      "images": {
-        "mobile": {
-          "src": "/assets/images/zoo-de-guadeloupe-tourism-mobile.avif",
-          "srcset": "/assets/images/zoo-de-guadeloupe-tourism-mobile-p-500.avif 500w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-800.avif 800w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-1080.avif 1080w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-1600.avif 1600w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile.avif 2000w",
-          "sizes": "100vw",
-          "alt": "Website screenshot"
-        },
-        "desktopFull": {
-          "backgroundImageUrl": "/assets/images/zoo-de-guadeloupe-tourism-desktop-full.avif"
-        }
-      }
-    },
-    {
-      "id": "point-nine-vc",
-      "url": "https://www.pointnine.com/",
-      "titleLine": "Point Nine - VC",
-      "featured": true,
-      "companyType": "vc",
-      "statusLabel": "released",
-      "year": 2026,
-      "month": 2,
-      "contributions": [],
-      "images": {
-        "mobile": {
-          "src": "/assets/images/point-nine-vc-mobile.avif",
-          "srcset": "/assets/images/point-nine-vc-mobile-p-500.avif 500w,\n/assets/images/point-nine-vc-mobile-p-800.avif 800w,\n/assets/images/point-nine-vc-mobile-p-1080.avif 1080w,\n/assets/images/point-nine-vc-mobile-p-1600.avif 1600w,\n/assets/images/point-nine-vc-mobile.avif 2000w",
-          "sizes": "100vw",
-          "alt": "Website screenshot"
-        },
-        "desktopFull": {
-          "backgroundImageUrl": "/assets/images/point-nine-vc-desktop-full.avif"
+          "backgroundImageUrl": "/assets/images/leverage-agency-desktop-full.avif"
         }
       }
     },
@@ -145,48 +182,6 @@
       }
     },
     {
-      "id": "leverage-agency",
-      "url": "https://www.theleverage.io/",
-      "titleLine": "Leverage - Agency",
-      "featured": false,
-      "companyType": "agency",
-      "statusLabel": "released",
-      "year": 2026,
-      "contributions": [],
-      "images": {
-        "mobile": {
-          "src": "/assets/images/leverage-agency-mobile.avif",
-          "srcset": "/assets/images/leverage-agency-mobile-p-500.avif 500w,\n/assets/images/leverage-agency-mobile-p-800.avif 800w,\n/assets/images/leverage-agency-mobile-p-1080.avif 1080w,\n/assets/images/leverage-agency-mobile-p-1600.avif 1600w,\n/assets/images/leverage-agency-mobile.avif 2000w",
-          "sizes": "100vw",
-          "alt": "Website screenshot"
-        },
-        "desktopFull": {
-          "backgroundImageUrl": "/assets/images/leverage-agency-desktop-full.avif"
-        }
-      }
-    },
-    {
-      "id": "plasma-one-fintech",
-      "url": "https://www.plasma.to/one",
-      "titleLine": "Plasma One - Fintech",
-      "featured": true,
-      "companyType": "startup_b2c",
-      "statusLabel": "released",
-      "year": 2025,
-      "contributions": [],
-      "images": {
-        "mobile": {
-          "src": "/assets/images/plasma-one-fintech-mobile.avif",
-          "srcset": "/assets/images/plasma-one-fintech-mobile-p-500.avif 500w,\n/assets/images/plasma-one-fintech-mobile-p-800.avif 800w,\n/assets/images/plasma-one-fintech-mobile-p-1080.avif 1080w,\n/assets/images/plasma-one-fintech-mobile-p-1600.avif 1600w,\n/assets/images/plasma-one-fintech-mobile.avif 2000w",
-          "sizes": "100vw",
-          "alt": "Website screenshot"
-        },
-        "desktopFull": {
-          "backgroundImageUrl": "/assets/images/plasma-one-fintech-desktop-full.avif"
-        }
-      }
-    },
-    {
       "id": "balkin-real-estate",
       "url": "https://www.balkin.mc/",
       "titleLine": "Balkin - Real Estate",
@@ -209,23 +204,28 @@
       }
     },
     {
-      "id": "thanks-ben",
-      "url": "https://www.thanksben.com/",
-      "titleLine": "Thanks Ben - Startup B2B",
-      "featured": true,
-      "companyType": "startup_b2b",
-      "statusLabel": "working_since",
-      "year": 2024,
+      "id": "zoo-de-guadeloupe-tourism",
+      "url": "https://www.zoodeguadeloupe.com/",
+      "titleLine": "Zoo de Guadeloupe - Tourism",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2025,
+      "month": 10,
+      "designer": {
+        "name": "Digidop",
+        "url": "https://www.digidop.com/"
+      },
       "contributions": [],
       "images": {
         "mobile": {
-          "src": "/assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform.avif",
-          "srcset": "/assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform-p-500.avif  500w,\n                                    /assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform-p-800.avif  800w,\n                                    /assets/images/6841603156095fe42be87f39_Screenshot_2025-06-05_at_11-12-19_Ben_The_Intelligent_Employee_Benefits_Platform.avif       1497w",
+          "src": "/assets/images/zoo-de-guadeloupe-tourism-mobile.avif",
+          "srcset": "/assets/images/zoo-de-guadeloupe-tourism-mobile-p-500.avif 500w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-800.avif 800w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-1080.avif 1080w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile-p-1600.avif 1600w,\n/assets/images/zoo-de-guadeloupe-tourism-mobile.avif 2000w",
           "sizes": "100vw",
           "alt": "Website screenshot"
         },
         "desktopFull": {
-          "backgroundImageUrl": "/assets/images/684160538f106c8010171baa_Screenshot_2025-06-05_at_11-12-29_Ben_The_Intelligent_Employee_Benefits_Platform_1_.avif"
+          "backgroundImageUrl": "/assets/images/zoo-de-guadeloupe-tourism-desktop-full.avif"
         }
       }
     },
@@ -276,69 +276,6 @@
       }
     },
     {
-      "id": "doctrio",
-      "url": "https://www.doctrio.com/",
-      "titleLine": "Doctrio - Startup B2B",
-      "featured": false,
-      "companyType": "startup_b2b",
-      "statusLabel": "released",
-      "year": 2024,
-      "contributions": [],
-      "images": {
-        "mobile": {
-          "src": "/assets/images/66018aeb6922371df320d696_Doctrio.avif",
-          "srcset": "/assets/images/66018aeb6922371df320d696_Doctrio-p-500.avif   500w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-800.avif   800w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-1080.avif 1080w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-1600.avif 1600w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio.avif        3024w",
-          "sizes": "100vw",
-          "alt": "Website screenshot"
-        },
-        "desktopFull": {
-          "backgroundImageUrl": "/assets/images/66018ae44616da6a668a8ea7_doctrio-fullscreen.avif"
-        }
-      }
-    },
-    {
-      "id": "polar-analytics",
-      "url": "https://www.polaranalytics.com/",
-      "titleLine": "Polar Analytics - Startup B2B",
-      "featured": false,
-      "companyType": "startup_b2b",
-      "statusLabel": "released",
-      "year": 2023,
-      "contributions": [],
-      "images": {
-        "mobile": {
-          "src": "/assets/images/653a6ad8bbd9309fc9e7e3f7_mobile.avif",
-          "srcset": "/assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-500.avif   500w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-800.avif   800w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-1080.avif 1080w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile.avif        1497w",
-          "sizes": "100vw",
-          "alt": "Website screenshot"
-        },
-        "desktopFull": {
-          "backgroundImageUrl": "/assets/images/653a6ad552cb18202958b2b2_desktop.avif"
-        }
-      }
-    },
-    {
-      "id": "explore314",
-      "url": "https://www.explore314.fr/",
-      "titleLine": "Explore314 - Video Agency",
-      "featured": false,
-      "companyType": "agency",
-      "statusLabel": "released",
-      "year": 2023,
-      "contributions": [],
-      "images": {
-        "mobile": {
-          "src": "/assets/images/653a76888a1820765f6656d6_desktop.gif",
-          "srcset": "",
-          "sizes": "100vw",
-          "alt": "Website screenshot"
-        },
-        "desktopFull": {
-          "backgroundImageUrl": "/assets/images/653a76888a1820765f6656d6_desktop.gif"
-        }
-      }
-    },
-    {
       "id": "ekoh",
       "url": "https://www.ekoh.ch/",
       "titleLine": "Ekoh - Social Media Agency",
@@ -385,6 +322,27 @@
         },
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682f16fa25cd4a26f6685ffa_Screenshot_2025-05-22_at_14-20-46_Halesia_Accueil_2_.avif"
+        }
+      }
+    },
+    {
+      "id": "doctrio",
+      "url": "https://www.doctrio.com/",
+      "titleLine": "Doctrio - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2024,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/66018aeb6922371df320d696_Doctrio.avif",
+          "srcset": "/assets/images/66018aeb6922371df320d696_Doctrio-p-500.avif   500w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-800.avif   800w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-1080.avif 1080w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio-p-1600.avif 1600w,\n                                    /assets/images/66018aeb6922371df320d696_Doctrio.avif        3024w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/66018ae44616da6a668a8ea7_doctrio-fullscreen.avif"
         }
       }
     },
@@ -448,6 +406,48 @@
         },
         "desktopFull": {
           "backgroundImageUrl": "/assets/images/682c2f6a51551bfd5ba8a7f9_certalis-full.avif"
+        }
+      }
+    },
+    {
+      "id": "polar-analytics",
+      "url": "https://www.polaranalytics.com/",
+      "titleLine": "Polar Analytics - Startup B2B",
+      "featured": false,
+      "companyType": "startup_b2b",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653a6ad8bbd9309fc9e7e3f7_mobile.avif",
+          "srcset": "/assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-500.avif   500w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-800.avif   800w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile-p-1080.avif 1080w,\n                                    /assets/images/653a6ad8bbd9309fc9e7e3f7_mobile.avif        1497w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653a6ad552cb18202958b2b2_desktop.avif"
+        }
+      }
+    },
+    {
+      "id": "explore314",
+      "url": "https://www.explore314.fr/",
+      "titleLine": "Explore314 - Video Agency",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2023,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/653a76888a1820765f6656d6_desktop.gif",
+          "srcset": "",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/653a76888a1820765f6656d6_desktop.gif"
         }
       }
     },
