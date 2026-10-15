@@ -2,6 +2,75 @@
   "version": 1,
   "projects": [
     {
+      "id": "cloud-iam-saas",
+      "url": "https://www.cloud-iam.com/",
+      "titleLine": "Cloud IAM - SaaS",
+      "featured": false,
+      "companyType": "saas",
+      "statusLabel": "released",
+      "year": 2026,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/cloud-iam-saas-mobile.avif",
+          "srcset": "/assets/images/cloud-iam-saas-mobile-p-500.avif 500w,\n/assets/images/cloud-iam-saas-mobile-p-800.avif 800w,\n/assets/images/cloud-iam-saas-mobile-p-1080.avif 1080w,\n/assets/images/cloud-iam-saas-mobile-p-1600.avif 1600w,\n/assets/images/cloud-iam-saas-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/cloud-iam-saas-desktop-full.avif",
+          "width": 1440,
+          "height": 7123
+        }
+      }
+    },
+    {
+      "id": "decibell-agence-h-tellerie",
+      "url": "https://www.decibell.eu/",
+      "titleLine": "Decibell - Agence hôtellerie",
+      "featured": false,
+      "companyType": "agency",
+      "statusLabel": "released",
+      "year": 2026,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/decibell-agence-h-tellerie-mobile.avif",
+          "srcset": "/assets/images/decibell-agence-h-tellerie-mobile-p-500.avif 500w,\n/assets/images/decibell-agence-h-tellerie-mobile-p-800.avif 800w,\n/assets/images/decibell-agence-h-tellerie-mobile-p-1080.avif 1080w,\n/assets/images/decibell-agence-h-tellerie-mobile-p-1600.avif 1600w,\n/assets/images/decibell-agence-h-tellerie-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/decibell-agence-h-tellerie-desktop-full.avif",
+          "width": 1440,
+          "height": 8393
+        }
+      }
+    },
+    {
+      "id": "le-m-dia-orientation-m-dia",
+      "url": "https://www.lemediaorientation.fr/",
+      "titleLine": "Le Média Orientation - Média",
+      "featured": false,
+      "companyType": "other",
+      "statusLabel": "released",
+      "year": 2026,
+      "contributions": [],
+      "images": {
+        "mobile": {
+          "src": "/assets/images/le-m-dia-orientation-m-dia-mobile.avif",
+          "srcset": "/assets/images/le-m-dia-orientation-m-dia-mobile-p-500.avif 500w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-800.avif 800w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-1080.avif 1080w,\n/assets/images/le-m-dia-orientation-m-dia-mobile-p-1600.avif 1600w,\n/assets/images/le-m-dia-orientation-m-dia-mobile.avif 2000w",
+          "sizes": "100vw",
+          "alt": "Website screenshot"
+        },
+        "desktopFull": {
+          "backgroundImageUrl": "/assets/images/le-m-dia-orientation-m-dia-desktop-full.avif",
+          "width": 1440,
+          "height": 2095
+        }
+      }
+    },
+    {
       "id": "zoo-de-guadeloupe-tourism",
       "url": "https://www.zoodeguadeloupe.com/",
       "titleLine": "Zoo de Guadeloupe - Tourism",
