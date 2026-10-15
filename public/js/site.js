@@ -90,25 +90,21 @@ document.addEventListener(
     if (!el) return;
 
     const a = el.closest('a[href^="mailto:"]');
-    if (a) {
-      captureConversion("conversion_email_click", {
-        href: a.getAttribute("href") || "",
-        placement: a.closest("nav")
-          ? "nav"
-          : a.closest("footer")
-            ? "footer"
-            : "page",
-      });
-      return;
-    }
+    if (!a) return;
 
-    const cta = el.closest('a.button[href^="mailto:"], a.button.w-button[href^="mailto:"]');
-    if (cta) {
-      captureConversion("conversion_work_with_me_click", {
-        href: cta.getAttribute("href") || "",
-        text: (cta.textContent || "").trim().slice(0, 80),
-      });
-    }
+    // Le header n'est pas un <nav> (le <nav> n'enveloppe que le menu mobile).
+    const placement = a.closest("header")
+      ? "nav"
+      : a.closest("footer")
+        ? "footer"
+        : a.closest(".section_hero")
+          ? "hero"
+          : "page";
+    captureConversion("conversion_email_click", {
+      href: a.getAttribute("href") || "",
+      placement,
+      text: (a.textContent || "").trim().slice(0, 80),
+    });
   },
   { capture: true },
 );
