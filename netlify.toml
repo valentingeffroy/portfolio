@@ -31,3 +31,10 @@
   from = "/contact/*"
   to = "/"
   status = 301
+
+# Préprod / deploy previews : ne pas indexer (la prod n'est pas concernée)
+[context.branch-deploy]
+  command = "printf '/*\\n  X-Robots-Tag: noindex, nofollow\\n' > public/_headers"
+
+[context.deploy-preview]
+  command = "printf '/*\\n  X-Robots-Tag: noindex, nofollow\\n' > public/_headers"
