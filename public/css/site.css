@@ -4737,5 +4737,10 @@ body.is-nav-open {
 .image_button {
   width: auto;
 }
+/* Réserve la place de la barre de scroll : pas de saut de mise en page quand le menu mobile
+   passe le body en overflow: hidden. */
+html {
+  scrollbar-gutter: stable;
+}
 /* ===== END overrides.css ===== */
 
